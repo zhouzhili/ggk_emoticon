@@ -84,11 +84,17 @@
     }
   }
 
+  // 隐藏原来的提交按钮
+  var submitBtn = document.getElementById('checkall')
+  if (submitBtn) {
+    submitBtn.style.display = 'none'
+  }
+
   //添加一个转换按钮
   var form = document.querySelector('div.topic-reply-create.container-box.mt10 > div.ui-content > form >.mt10')
   var submit2 = document.createElement('input');
-  submit2.value = "转换表情";
-  submit2.setAttribute("class", "btn btn-default");
+  submit2.value = "立即回复";
+  submit2.setAttribute("class", "btn btn-primary mr10");
   submit2.type = "button";
   form.insertBefore(submit2, form.childNodes[0]);
   submit2.href = 'javascript:void(0);';
@@ -109,7 +115,9 @@
     }
     reply_content.value = sourceInput;
     //转换完成提交回复
-    //        form.submit();
+    if (submitBtn) {
+      submitBtn.click()
+    }
   });
 
 
