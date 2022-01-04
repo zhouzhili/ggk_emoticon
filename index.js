@@ -6,6 +6,8 @@
 // @namespace    https://github.com/zhouzhili/ggk_emoticon
 // @match        https://www.guozaoke.com/t/*
 // @match        https://guozaoke.com/t/*
+// @exclude      https://guozaoke.com/t/create/*
+// @exclude      https://www.guozaoke.com/t/create/*
 // @icon         https://cdn.guozaoke.com//static/avatar/79/s_default.png
 // @license MIT
 
